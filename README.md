@@ -28,8 +28,8 @@ Train the model for 30 epochs using the prepared training data and validate its 
 Evaluate the model's accuracy and loss, and plot the results to track performance over time.
 
 ## PROGRAM
-### Name:BASKARAN V
-### Register Number:212222230020
+### Name:MOHAMED ASEEM P
+### Register Number:212221230063
 ```
 import tensorflow as tf
 import numpy as np
@@ -82,7 +82,7 @@ def train_val_datasets(data):
 
 # Create the datasets
 train_dataset, validation_dataset = train_val_datasets(data)
-print('Name:BASKARAN V       Register Number: 212222230020')
+print('Name:MOHAMED AASEEM P     Register Number: 212221230063')
 print(f"There are {train_dataset.cardinality()} sentence-label pairs for training.\n")
 print(f"There are {validation_dataset.cardinality()} sentence-label pairs for validation.\n")
 
@@ -126,7 +126,7 @@ def fit_vectorizer(train_sentences, standardize_func):
 text_only_dataset = train_dataset.map(lambda text, label: text)
 vectorizer = fit_vectorizer(text_only_dataset, standardize_func)
 vocab_size = vectorizer.vocabulary_size()
-print('Name:BASKARAN V      Register Number: 212222230020  ')
+print('Name:MOHAMED ASEEM P     Register Number: 212221230063  ')
 print(f"Vocabulary contains {vocab_size} words\n")
 def fit_label_encoder(train_labels, validation_labels):
   
@@ -147,7 +147,7 @@ train_labels_only = train_dataset.map(lambda text, label: label)
 validation_labels_only = validation_dataset.map(lambda text, label: label)
 
 label_encoder = fit_label_encoder(train_labels_only,validation_labels_only)
-print('Name: BASKARAN V     Register Number: 212222230020    ')
+print('Name: MOHAMED ASEEM P    Register Number: 212221230063    ')
 print(f'Unique labels: {label_encoder.get_vocabulary()}')
 
 def preprocess_dataset(dataset, vectorizer, label_encoder, batch_size=32):
@@ -167,7 +167,7 @@ validation_proc_dataset = preprocess_dataset(validation_dataset, vectorizer, lab
 
 train_batch = next(train_proc_dataset.as_numpy_iterator())
 validation_batch = next(validation_proc_dataset.as_numpy_iterator())
-print('Name: BASKARAN V     Register Number: 212222230020      ')
+print('Name:MOHAMED ASEEM P     Register Number: 212221230063      ')
 print(f"Shape of the train batch: {train_batch[0].shape}")
 print(f"Shape of the validation batch: {validation_batch[0].shape}")
 
@@ -212,7 +212,7 @@ def plot_graphs(history, metric):
     plt.ylabel(metric)
     plt.legend([metric, f'val_{metric}'])
     plt.show()
-print('Name: BASKARAN V   Register Number: 212222230020 ')
+print('Name: MOHAMED ASEEM P Register Number: 212221230063 ')
 plot_graphs(history, "accuracy")
 plot_graphs(history, "loss")
 ```
